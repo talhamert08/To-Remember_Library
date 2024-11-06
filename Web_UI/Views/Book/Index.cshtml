@@ -1,0 +1,85 @@
+﻿@using Entity.Concrete
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+@model List<BookDto>
+
+@foreach (var item in Model)
+{
+    <div class="listContainerThere"
+         style="border-bottom: 5px solid #9cfc02;border-left: 5px solid #1dffec;border-top: 5px solid #9cfc02;border-right: 5px solid #1dffec;">
+
+
+        <h2 class="listContainerTitle"> @item.BookName </h2>
+
+
+        <div class="listContainerInThree">
+
+            <div>
+
+                <p class="lisContainerP">Writter : @item.Writer</p>
+                <p class="lisContainerP">Description : @item.Description</p>
+                <p class="lisContainerP">Publication Date : @item.PublicationDate.Day/@item.PublicationDate.Month/@item.PublicationDate.Year </p>
+
+                <div>
+
+                    <button class="deleteButton" onclick="deleteBook('@item.Id')">
+                        Delete
+                    </button>
+
+                    <button class="updateButton" onclick="updateBook('@item.Id')">
+                        Update
+                    </button>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+}
+
+<script>
+
+    async function deleteBook(bookId) {
+    // Swal onay penceresini göster
+    const result = await Swal.fire({
+        title: 'Are you sure?',
+        text: 'Do you really want to delete this book?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!',
+        cancelButtonText: 'No, cancel!'
+    });
+
+    // Kullanıcı onay verdiyse, yönlendirme işlemini gerçekleştir
+    if (result.isConfirmed) {
+        // Yönlendirme URL'sini oluştur
+        const redirectUrl = `/Book/DeleteBook?bookId=${bookId}`;
+
+        // Kullanıcıyı yönlendir
+        window.location.href = redirectUrl;
+    }
+}
+
+
+    async function updateBook(bookId) {
+        // Yönlendirme URL'sini oluştur
+        const redirectUrl = `/Book/UpdateBook?bookId=${bookId}`;
+
+        // Kullanıcıyı yönlendir
+        window.location.href = redirectUrl;
+    }
+
+
+</script>
+
+
+
+

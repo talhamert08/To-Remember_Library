@@ -1,0 +1,49 @@
+﻿@using Entity.Concrete
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model BookDto
+
+<form asp-controller="Book" asp-action="UpdateBookMethod" method="POST">
+
+    <div class="formContainer">
+
+        <img class="imgPrvt" src="/image/system-update.png" style="margin-bottom: 23px;">
+
+        <div style="display: flex;">
+
+            <input class="inputForm" name="BookName" value="@Model.BookName" placeholder="Book Name" required>
+
+            <input class="inputForm" name="Writer" value="@Model.Writer" placeholder="Writter" required>
+
+        </div>
+
+        <input class="inputFormV2" name="Description" value="@Model.Description" placeholder="Description" required>
+
+
+        <div style="display: flex;margin-top: 15px;">
+
+            <input class="inputForm" name="Subject" value="@Model.Subject" placeholder="Subject" required>
+
+            <input class="inputForm" type="date" name="PublicationDate" value="@Model.PublicationDate.ToString("yyyy-MM-dd")" placeholder="Bank Name" required>
+
+        </div>
+
+        <button class="buttonPrvt" type="submit" style="margin-bottom: 25px;"> Update </button>
+
+    </div>
+
+    <input style="display:none" name="Id" value="@Model.Id"/>
+
+    <input style="display:none" name="AddUserId" value="@Model.AddUserId" />
+
+    <input style="display:none" name="AddDate" value="@Model.AddDate" />
+
+    <input style="display:none" name="EditUserId" value="@Model.EditUserId" />
+
+    <input style="display:none" name="EditDate" value="@Model.EditDate" />
+
+</form>

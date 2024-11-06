@@ -1,0 +1,767 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    background: aliceblue;
+    padding: auto;
+    /* linear-gradient(to right, rgb(0, 233, 175), rgb(0, 173, 239)); */
+}
+
+nav {
+    background: linear-gradient(to right,#e9fff8, #9ffce0,#d1ff86);
+    height: auto;
+    width: 90%;
+    border-radius: 10pc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    /* Gölge ekleme */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+}
+
+.navImg {
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .navImg:hover {
+        filter: blur(1px);
+    }
+
+.navBtn {
+    height: 35px;
+    width: 125px;
+    background-color: aquamarine;
+    color: black;
+    margin: auto;
+    margin-left: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-bottom: 15px;
+}
+
+.page-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.containerForLog {
+    background: linear-gradient(to right, rgb(108, 213, 255), rgb(193, 255, 245),rgb(109, 255, 219));
+    height: 385px;
+    max-width: 338px;
+    width: 100%;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    /* Gölge ekleme */
+    margin: auto;
+}
+
+.chartContainer {
+    border: 3px solid #f49131;
+    background-color: #251c35;
+    box-shadow: 0 0 16px rgba(red, green, blue, alpha);
+    height: 325px;
+    max-width: 325px;
+    width: 100%;
+    border-radius: 25px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+
+
+.imgPrvt {
+    border-radius: 10pc;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 7px;
+    margin-right: 7px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    /* Daha belirgin bir gölge */
+}
+
+.inputForLog {
+    border-radius: 10pc;
+    max-width: 185px;
+    width: 100%;
+    height: 41px;
+    padding: 10px;
+    /* içeriği düzenlemek için iç boşluk ekleme */
+    border: 1px solid #ccc;
+    /* kenarlık ekleme */
+    margin-top: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 7px;
+    margin-right: 7px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    /* Daha belirgin bir gölge */
+}
+
+    /* Aktif durumdayken (tıklandığında) */
+    .inputForLog:focus {
+        border: 1px solid aquamarine;
+        /* Kenarlık ekleme */
+        outline: none;
+        /* Varsayılan odak çerçevesini kaldırma */
+        box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+        /* Mavi gölge ekleyebilirsiniz */
+        background-color: aliceblue;
+    }
+
+
+
+.buttonPrvt {
+    border-radius: 10pc;
+    /* Kenar yumuşatma */
+    max-width: 250px;
+    width: 100%;
+    height: 41px;
+    /* Yüksekliği artırabilirsiniz */
+    margin-top: 25px;
+    background-color: #3fffdf;
+    /* Arka plan rengi */
+    color: rgb(82, 72, 72);
+    /* Metin rengi */
+    border: none;
+    /* Kenarlık yok */
+    cursor: pointer;
+    /* İmleç tipi */
+    font-size: 16px;
+    /* Metin boyutu */
+    transition: background-color 0.3s;
+    /* Arka plan rengi geçiş efekti */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 7px;
+    margin-right: 7px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    /* Daha belirgin bir gölge */
+}
+
+    /* İsteğe bağlı: Düğmeye tıklandığında stil değişikliği */
+    .buttonPrvt:hover {
+        filter: blur(1px);
+        /* Hover (üzerine gelindiğinde) rengi */
+    }
+
+.h2Login {
+    font-family: 'Lato', sans-serif;
+    margin-top: 5px;
+    font-size: 1.5em;
+    /* veya başka bir boyut değeri */
+}
+
+.footerFor {
+    position: fixed;
+    left: 50%;
+    bottom: 0.000000000001%;
+    transform: translateX(-50%);
+    background: linear-gradient(to right, rgb(0, 233, 175), rgb(0, 173, 239));
+    /* Beyaz arkaplan */
+    color: #524848;
+    /* Metin rengi */
+    text-align: center;
+    padding: 15px;
+    /* Daha geniş bir iç kenarlık */
+    width: 50%;
+    /* Daha dar bir genişlik */
+    margin-bottom: 20px;
+    /* Daha fazla alt boşluk */
+    border-radius: 15pc;
+    /* Daha yuvarlatılmış köşeler */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    /* Daha belirgin bir gölge */
+    font-family: 'Open Sans', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    /* Pürüzsüz geçiş efekti */
+}
+
+    .footerFor:hover {
+        filter: blur(1px);
+    }
+
+.mySwal {
+    border-radius: 35px !important;
+}
+
+.my-confirm-button {
+    background-color: #8ef6e4;
+    /* Örnek: Yeşil arkaplan renk */
+    color: black;
+    /* Örnek: Beyaz metin renk */
+    border: none;
+    /* Kenarlık olmadan */
+    padding: 10px 20px;
+    /* Yeterli dolgunluk */
+    border-radius: 5px;
+    /* Yuvarlatılmış köşeler */
+    cursor: pointer;
+    /* İşaretçi türü */
+    border-radius: 25px;
+}
+
+/* Pop-up arkaplanı için stil */
+.popup-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Yarı şeffaf siyah arkaplan */
+}
+
+.popup-content-Profile {
+    position: fixed;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    /* background: #90f6d7; */
+    background: linear-gradient(to right, #85ff55, #6afff8);
+    ;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+}
+/* Pop-up penceresi için stil */
+.popup-content {
+    position: fixed;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    /* background: #90f6d7; */
+    background: linear-gradient(to right, #6afff8, #85ff55);
+    ;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+
+.pop-up-Btn {
+    border-radius: 10pc;
+    /* Kenar yumuşatma */
+    max-width: 100px;
+    width: 100%;
+    height: 40px;
+    /* Yüksekliği artırabilirsiniz */
+    background-color: rgb(255, 78, 78);
+    /* Arka plan rengi */
+    color: black;
+    /* Metin rengi */
+    border: none;
+    /* Kenarlık yok */
+    cursor: pointer;
+    /* İmleç tipi */
+    font-size: 16px;
+    /* Metin boyutu */
+    transition: background-color 0.3s;
+    /* Arka plan rengi geçiş efekti */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    /* Daha belirgin bir gölge */
+    margin: auto;
+}
+
+    .pop-up-Btn:hover {
+        filter: blur(1px);
+        /* Hover (üzerine gelindiğinde) rengi */
+    }
+
+
+
+.buttonMenu {
+    border-radius: 10pc;
+    /* Kenar yumuşatma */
+    max-width: 250px;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to right, aliceblue, rgb(217, 237, 255));
+    /* Arka plan rengi */
+    color: black;
+    /* Metin rengi */
+    border: none;
+    /* Kenarlık yok */
+    cursor: pointer;
+    /* İmleç tipi */
+    font-size: 16px;
+    /* Metin boyutu */
+    transition: background-color 0.3s;
+    /* Arka plan rengi geçiş efekti */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    /* Daha belirgin bir gölge */
+    margin: auto;
+    text-decoration: none;
+    /* Alt çizgiyi kaldırma */
+}
+
+.buttonPrifle {
+    border-radius: 10pc;
+    /* Kenar yumuşatma */
+    max-width: 250px;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to right, aliceblue, rgb(78, 172, 255));
+    /* Arka plan rengi */
+    color: black;
+    /* Metin rengi */
+    border: none;
+    /* Kenarlık yok */
+    cursor: pointer;
+    /* İmleç tipi */
+    font-size: 16px;
+    /* Metin boyutu */
+    transition: background-color 0.3s;
+    /* Arka plan rengi geçiş efekti */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    /* Daha belirgin bir gölge */
+    margin: auto;
+    text-decoration: none;
+    /* Alt çizgiyi kaldırma */
+}
+
+/* İsteğe bağlı: Düğmeye tıklandığında stil değişikliği */
+.buttonMenu:hover {
+    filter: blur(1px);
+    /* Hover (üzerine gelindiğinde) rengi */
+}
+
+.borderContainer {
+    background: linear-gradient(to right,#00ffae, #55ff7a,#cdff7c);
+    height: auto;
+    width: auto;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    float: left;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.borderContainerWrite {
+    color: gray;
+    /* Gri renk */
+    font-weight: 300;
+    /* İnce font ağırlığı */
+    margin-left: 15px;
+}
+
+.borderContainerTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(90, 90, 90);
+    /* Gri renk */
+    font-weight: 750;
+    /* İnce font ağırlığı */
+}
+
+
+
+.cardContainer {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    margin: 25px;
+    overflow: hidden;
+    max-width: 300px;
+    transition: max-height 0.3s ease;
+    /* Animasyonlu geçiş */
+}
+
+.cardHeader {
+    padding: 10px;
+    background-color: #9cfc02;
+    color: white;
+    cursor: pointer;
+}
+
+.cardContent {
+    padding: 10px;
+}
+
+.listContainerThere {
+    background: linear-gradient(to right,#f7fa5f, #76ffe1,#fcacff);
+    height: auto;
+    max-width: 320px;
+    width: 90%;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    float: left;
+    margin-left: 15px;
+    margin-right: 7px;
+    padding-top: 7px;
+    padding-bottom: 15px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.blankContainer {
+    background: transparent;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    float: left;
+}
+
+.listContainerTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(90, 90, 90);
+    /* Gri renk */
+    font-weight: 750;
+    /* İnce font ağırlığı */
+    color: darkslategray;
+    font-family: 'Lobster', cursive;
+}
+
+.lisContainerP {
+    font-family: 'Merriweather', serif;
+}
+
+.listContainerInThree {
+    background-color: white;
+    height: auto;
+    max-width: 320px;
+    width: 93%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    float: left;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.listColumnItemTitleThree {
+    max-width: 30%;
+    width: 100%;
+    height: 40px;
+    border-radius: 15pc;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3px;
+    border: none;
+    background: #a2c11c;
+    margin-top: 5px;
+}
+
+.listColumnItemThree {
+    max-width: 30%;
+    width: 100%;
+    height: 40px;
+    border-radius: 15pc;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3px;
+    border: none;
+    background: #5ce0a7;
+    margin-top: 5px;
+}
+
+
+
+
+.listContainerFour {
+    background: linear-gradient(to right,#f7fa5f, #76ffe1,#fcacff);
+    ;
+    height: auto;
+    max-width: 370px;
+    width: 89%;
+    border-radius: 35px;
+    margin-top: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    margin-left: 9px;
+    margin-right: 7px;
+    padding-top: 7px;
+    padding-bottom: 15px;
+    padding-left: 7px;
+    padding-right: 7px;
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+
+.listContainerInFour {
+    background-color: rgb(204, 203, 203);
+    height: 50px;
+    width: 90%;
+    border-radius: 10pc;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    float: left;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.listColumnItemTitleFour {
+    max-width: 23%;
+    width: 100%;
+    height: 40px;
+    border-radius: 15pc;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3px;
+    border: none;
+    background: #a2c11c;
+    margin-top: 5px;
+}
+
+.listColumnItemFour {
+    max-width: 23%;
+    width: 100%;
+    height: 40px;
+    border-radius: 15pc;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3px;
+    border: none;
+    background: #5ce0a7;
+    margin-top: 5px;
+}
+
+
+
+.formContainer {
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 337px;
+    width: 100%;
+    height: 410px;
+    background: linear-gradient(to right, #9cfc02, #32ebb3, #03ffb3);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.formContainerTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* Gri renk */
+    font-weight: 750;
+    /* İnce font ağırlığı */
+}
+
+.inputForm {
+    border-radius: 10pc;
+    max-width: 130px;
+    width: 100%;
+    height: 41px;
+    padding: 10px;
+    /* içeriği düzenlemek için iç boşluk ekleme */
+    border: 1px solid #ccc;
+    /* kenarlık ekleme */
+    margin-top: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 7px;
+    margin-right: 7px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    /* Daha belirgin bir gölge */
+}
+
+.inputFormV2 {
+    border-radius: 10pc;
+    max-width: 260px;
+    width: 100%;
+    height: 41px;
+    padding: 10px;
+    /* içeriği düzenlemek için iç boşluk ekleme */
+    border: 1px solid #ccc;
+    /* kenarlık ekleme */
+    margin-top: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 7px;
+    margin-right: 7px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    /* Daha belirgin bir gölge */
+}
+
+/* Aktif durumdayken (tıklandığında) */
+.inputForm:focus {
+    border: 1px solid aquamarine;
+    /* Kenarlık ekleme */
+    outline: none;
+    /* Varsayılan odak çerçevesini kaldırma */
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+    /* Mavi gölge ekleyebilirsiniz */
+    background-color: aliceblue;
+}
+
+.dashBoardTitle {
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 90%;
+    background: linear-gradient(to right, #9cfc02, #32ebb3, #03ffb3);
+    ;
+    display: flex;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    /* Daha belirgin bir gölge */
+    border-radius: 10pc;
+    margin: auto;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+
+.dashboardContainerTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(95, 95, 95);
+    /* Gri renk */
+    font-weight: 750;
+    /* İnce font ağırlığı */
+}
+
+.welcomeMessageFont {
+    font-family: 'Lobster', cursive;
+    font-size: 2.5em;
+    color: #333;
+    margin-top: 15%;
+}
+
+.updateButton {
+    width: 49%;
+    height: 35px; /* Yüksekliği biraz artırarak daha belirgin yap */
+    border-radius: 12px; /* Köşeleri daha yumuşak yap */
+    background-color: #FAC218; /* Modern bir turuncu tonu */
+    border: none;
+    color: white; /* Yazı rengi */
+    font-size: 16px; /* Yazı boyutu */
+    font-weight: bold; /* Kalın yazı */
+    cursor: pointer; /* Üzerine gelindiğinde gösterge değişir */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Yumuşak geçiş efekti */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+}
+
+    .updateButton:hover {
+        background-color: #FF7A29; /* Hover sırasında daha koyu bir turuncu */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Hover sırasında gölgeyi artır */
+    }
+
+    .updateButton:active {
+        background-color: #E66B20; /* Tıklama sırasında renk */
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Tıklama sırasında gölgeyi azalt */
+        transform: scale(0.98); /* Hafif küçülme efekti */
+    }
+
+.deleteButton {
+    width: 49%;
+    height: 35px; /* Yüksekliği daha iyi görünmesi için artırıldı */
+    border-radius: 12px; /* Köşeler yumuşatıldı */
+    background-color: #D41E00; /* Modern ve şık bir kırmızı tonu */
+    border: none;
+    color: white; /* Yazı rengi */
+    font-size: 16px; /* Yazı boyutu */
+    font-weight: bold; /* Kalın yazı */
+    cursor: pointer; /* Üzerine gelindiğinde gösterge değişir */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Yumuşak geçiş efekti */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+}
+
+    .deleteButton:hover {
+        background-color: #D62828; /* Hover sırasında daha koyu bir kırmızı */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Hover sırasında gölgeyi artır */
+    }
+
+    .deleteButton:active {
+        background-color: #C72525; /* Tıklama sırasında renk */
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Tıklama sırasında gölgeyi azalt */
+        transform: scale(0.98); /* Hafif küçülme efekti */
+    }

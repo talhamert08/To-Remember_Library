@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Move</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="website icon" type="png" href="~/image/user.png" />
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+
+            <nav>
+                <div style="float: left;margin-right: 25px;">
+                    <img class="navImg" src="~/image/menu.png" onclick="openPopup()">
+                </div>
+
+                <div style="float: left;margin-right: 25px;">
+                    <img class="navImg" src="~/image/refresh.png" onclick="refreshPage()">
+                </div>
+
+                <div style="float: left;margin-right: 25px;">
+                    <img class="navImg" src="~/image/turn-back.png" onclick="goBack()">
+                </div>
+
+                <div style="float: right;margin-right: -23px;">
+
+                    <a onclick="openPopupProfile()">
+                        <img class="navImg" src="~/image/user.png">
+                    </a>
+
+                </div>
+            </nav>
+
+
+        </div>
+
+        <div id="popupBackgroundProfile" class="popup-background" onclick="closePopupProfile()">
+
+
+            <div id="popupContentProfile" class="popup-content-Profile">
+
+                <h2 style="font-family: 'Dancing Script', cursive;color: #141e29;">General</h2>
+
+
+                @* <div style="margin-bottom: 15px;">
+                    <a class="buttonPrifle" href="index.html"> Profile </a>
+                </div> *@
+
+                <div style="margin-bottom: 15px;">
+                    <a class="buttonPrifle" href="/Auth/Login"> Login </a>
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <a class="buttonPrifle" href="/Auth/Logout"> Logout </a>
+                </div>
+                <div style="margin-top: 50px;">
+
+                    <button class="pop-up-Btn" onclick="closePopupProfile()">Close</button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+    <div id="popupBackground" class="popup-background" onclick="closePopup()">
+
+
+        <div id="popupContent" class="popup-content">
+
+            <h2 style="font-family: 'Dancing Script', cursive;color: #141e29;">Menu</h2>
+
+
+            <div style="margin-bottom: 15px;">
+                <a class="buttonMenu" href="/Home/Index"> Home </a>
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <a class="buttonMenu" href="/Book/Index"> Books </a>
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <a class="buttonMenu" href="/Book/AddBook"> Add Book </a>
+            </div>
+@* 
+            <div style="margin-bottom: 15px;">
+                <a class="buttonMenu" href="borders.html"> Borders </a>
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <a class="buttonMenu" href="list.html"> List </a>
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <a class="buttonMenu" href="login.html"> Login </a>
+            </div>
+ *@
+            <div style="margin-top: 50px;">
+
+                <button class="pop-up-Btn" onclick="closePopup()">Close</button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    
+
+
+    <div class="footerFor" style="margin-top: 50px;">
+
+        <footer>
+            Developed By Talha MERT
+        </footer>
+
+    </div>
+
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+
+    <script>
+
+        function OpenClose(id, lock, key) {
+            var item = document.getElementById(id);
+            var lock = document.getElementById(lock);
+            var key = document.getElementById(key);
+
+            if (item.style.display == "block") {
+
+                item.style.display = "none";
+                // itemContainer.style.height = "60px";
+                lock.style.display = "block";
+                key.style.display = "none"
+
+            } else {
+
+                item.style.display = "block";
+                lock.style.display = "none";
+                key.style.display = "block"
+                // itemContainer.style.height = "225px";
+
+            }
+        }
+
+        function Message() {
+            alert("Ok");
+        }
+
+        function ThrowSwal() {
+
+            Swal.fire({
+                title: 'Giriş Başarılı!',
+                text: 'Oturum Açıldı',
+                icon: 'success',
+                confirmButtonText: 'Tamam',
+                customClass: {
+                    popup: 'mySwal',
+                    confirmButton: 'my-confirm-button',
+                },
+                buttonsStyling: false
+            });
+
+        }
+        function openPopup() {
+            document.getElementById("popupBackground").style.display = "block";
+        }
+
+        // Pop-up kapatma fonksiyonu
+        function closePopup() {
+            document.getElementById("popupBackground").style.display = "none";
+        }
+        function openPopupProfile() {
+            document.getElementById("popupBackgroundProfile").style.display = "block";
+        }
+
+        // Pop-up kapatma fonksiyonu
+        function closePopupProfile() {
+            document.getElementById("popupBackgroundProfile").style.display = "none";
+        }
+        function refreshPage() {
+            // JavaScript ile sayfayı yenile
+            location.reload();
+
+        }
+
+        function goBack() {
+            // Bir önceki sayfaya dön
+            window.history.back();
+
+        }
+
+    </script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

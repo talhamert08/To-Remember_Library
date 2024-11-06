@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<script>
+    var message = @Html.Raw(Json.Serialize(ViewData["SuccessMessage"]));
+
+    const redirectUrl = '/Book/Index';
+
+    Swal.fire({
+        title: 'Success!',
+        text: message,
+        icon: 'success',
+        confirmButtonText: 'OK'
+    }).then(() => {
+        // Sayfa yenileniyor
+        window.location.href = redirectUrl;
+    });
+</script>
